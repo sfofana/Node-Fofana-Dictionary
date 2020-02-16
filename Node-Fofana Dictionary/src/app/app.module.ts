@@ -4,10 +4,12 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NavbarModule, ChartsModule, WavesModule, ButtonsModule, CardsModule, ModalModule, TooltipModule, PopoverModule } from 'angular-bootstrap-md'
 
 import { AppComponent } from './app.component';
+import { DictionaryComponent } from './dictionary/dictionary.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DictionaryComponent
   ],
   imports: [
     BrowserModule,
