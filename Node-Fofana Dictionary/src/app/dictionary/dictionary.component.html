@@ -9,7 +9,7 @@
           <!--Grid column-->
           <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-md-left wow fadeInLeft"
             data-wow-delay="0.3s">
-            <h1 class="display-4 font-weight-bold">Definition</h1>
+            <h1 class="display-4 font-weight-bold">{{display | titlecase}}</h1>
             <hr class="hr-light">
             <h6 class="mb-3" *ngFor="let def of results">{{def}}</h6>
           </div>
