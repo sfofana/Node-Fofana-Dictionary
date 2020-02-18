@@ -1,23 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Headers } from '../model/headers';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DictionaryService {
 
-  private url = "https://od-api.oxforddictionaries.com/api/v2/entries/en-gb/ace";
-  private strictMatch = "?strictMatch=false";
-  private header: Headers = new Headers();
-  private apiID = "";
-  private apiKey = "";
+  private url = "https://dictionaryapi.com/api/v3/references/collegiate/json/";
+  private apiKey = "your-api-key";
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {}
 
-  search(): Observable<any>{
-    return this.http.get<any>();
-  }
+  search(word: string) {
+    const readUrl = this.url+word+'?key='+this.apiKey; 
+    return this.http.get(readUrl);
+  } 
 
 }

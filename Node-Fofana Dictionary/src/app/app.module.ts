@@ -6,6 +6,8 @@ import { NavbarModule, ChartsModule, WavesModule, ButtonsModule, CardsModule, Mo
 
 import { AppComponent } from './app.component';
 import { DictionaryComponent } from './dictionary/dictionary.component';
+import { FormsModule } from '@angular/forms';
+import { DictionaryService } from './service/dictionary.service';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,14 @@ import { DictionaryComponent } from './dictionary/dictionary.component';
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
+    FormsModule,
     HttpClientModule,
     NavbarModule,
     WavesModule,
     ButtonsModule,
     CardsModule
   ],
-  providers: [],
+  providers: [DictionaryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
