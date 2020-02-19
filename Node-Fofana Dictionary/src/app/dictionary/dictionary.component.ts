@@ -22,7 +22,7 @@ export class DictionaryComponent implements OnInit {
 
   public search(){
     this.display = this.word;
-    return this.service.search(this.word).subscribe(data=>this.results=data[0].shortdef);
+    this.service.search(this.word).subscribe(data=>this.results=data[0].shortdef);
     console.log(this.word);
   }
 }
