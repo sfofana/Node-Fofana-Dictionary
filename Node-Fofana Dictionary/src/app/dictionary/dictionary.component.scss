@@ -1,3 +1,22 @@
 .view{
     margin-top: 10%;
 }
+
+.card{
+    background: linear-gradient(to left, #5c6bc0, #283593);
+    opacity: 0.5;
+}
+
+.card2{
+    background: linear-gradient(to right, #5c6bc0, #283593);
+    opacity: 0.5;
+}
+
+.search{
+   font-size: 200%;
+   color: white;
+}
+
+#search{
+    font-size: 150%;
+}

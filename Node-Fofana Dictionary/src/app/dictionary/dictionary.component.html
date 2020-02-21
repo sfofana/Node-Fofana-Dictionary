@@ -9,18 +9,29 @@
           <!--Grid column-->
           <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-md-left wow fadeInLeft"
             data-wow-delay="0.3s">
-            <h1 class="display-4 font-weight-bold">{{display | titlecase}}</h1>
-            <hr class="hr-light">
-            <h6 class="mb-3" *ngFor="let def of results">{{def}}</h6>
+            <mdb-card class="card">
+              <mdb-card-body>
+                <mdb-card-text class="white-text">
+                  <h1 class="display-4 font-weight-bold">{{display | titlecase}}</h1>
+                  <hr class="hr-light">
+                  <h6 class="mb-3" *ngFor="let def of results">{{def}}</h6>
+                </mdb-card-text>
+              </mdb-card-body>
+            </mdb-card>
           </div>
           <!--Grid column-->
           <!--Grid column-->
           <div class="col-md-6 col-xl-5 mb-4">
-            <form class="form-inline md-form form-sm active-cyan-2 mt-2">
-              <input class="form-control form-control-sm mr-3 w-75" [(ngModel)]="word" name="word" type="text" placeholder="Search"
-                aria-label="Search">
-              <i class="fas fa-search" (click)="search()" aria-hidden="true"></i>
-            </form>
+            <mdb-card class="card2">
+              <mdb-card-body>
+                <form class="form-inline md-form form-sm active-cyan-2 mt-2">             
+                  <input mdbInput type="text" id="search" class="form-control white-text mr-3 w-75" [(ngModel)]="word" name="word">
+                  <label class="white-text" for="search">Search</label>
+                  <i class="fas fa-search search" mdbWavesEffect (click)="search()" aria-hidden="true"></i>
+                </form>
+              </mdb-card-body>
+            </mdb-card>
+            
           </div>
           <!--Grid column-->
         </div>

@@ -28,7 +28,7 @@ export class DictionaryComponent implements OnInit {
     if(!localStorage[this.word]){
       this.service.search(this.word).subscribe(data=>this.results=data[0].shortdef);
     }
-    if(localStorage[this.word]){
+    else{
       this.results = JSON.parse(localStorage[this.word])[0].shortdef; //get cache 
       console.log('get from cache');
     }    
